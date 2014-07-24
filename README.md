@@ -23,5 +23,7 @@ $yo->all();
 // Send a Yo to one user
 $yo->user('USERNAME');
 
+// Get number of subscribers
+$count = $yo->subscribers(); // returns an int or false
 ?>
 ```
