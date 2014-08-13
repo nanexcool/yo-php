@@ -14,14 +14,14 @@ class Yo {
         $this->_apiKey = $apiKey;
     }
     
-    public function user($username) {
+    public function user($username, $link = '') {
         if ($username != '') {
-            $this->processRequest($username);
+            $this->processRequest($username, $link);
         }
     }
 
-    public function all() {
-        $this->processRequest();
+    public function all($link = '') {
+        $this->processRequest($username = '', $link);
     }
 
     public function subscribers() {
@@ -50,7 +50,7 @@ class Yo {
         return false;
     }
 
-    private function processRequest($username = '') {
+    private function processRequest($username = '', $link = '') {
         $postFields = array(
             'api_token' => $this->_apiKey
         );
@@ -60,6 +60,10 @@ class Yo {
         if ($username != '') {
             $postFields['username'] = $username;
             $url = $this->urls['user'];
+        }
+
+        if ($link != '') {
+        	$postFields['link'] = $link;
         }
 
         $options = array(
