@@ -7,7 +7,7 @@ Send Yos from your PHP app with 2 lines of code.
 
 Send your location!
 
-This only works when sending a Yo to an individual user, not to all your subscribers at once.
+This only works when sending a Yo to an individual user, not to all your subscribers at once. Use method "userWithLocation".
 
 ## New in Version 0.2
 
